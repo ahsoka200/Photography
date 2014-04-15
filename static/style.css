@@ -1,4 +1,48 @@
+.header {
+  background-color: #FFFFFF;
+  height: 75px;
+}
 
-body {
-	background-color: lightblue;
+.logo {
+  font-size: 40px;
+  font-family: bank Gothic;
+  color: #A8A8A8;
+  padding-top: 26px;
+}
+
+ul.navbar li {
+  display: inline;
+  font-size: 13px;
+  color: #808080;
+  font-family: Andale Mono;
+  padding-right: 25px 
+}
+
+ul.navbar{
+  padding-top: 27px;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.mainimage {
+ height: 500px;
+}
+
+.about-text {
+  font-family: Andale Mono; 
+  font-size: 13px;
+  color: #7D7D7D;
+}
+
+.bottomImages {
+  height: 155px;
+  width: 1000px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.bottomImages img{
+  height: 122px;
 }

@@ -1,0 +1,26 @@
+<div class="row-fluid">
+    
+      <div class="span2">
+       <!--spacer!-->
+      </div>
+
+      <div class="span8 text-center">
+       <img class="mainimage" src=" {{ photos[0] }} " />
+      </div>
+
+      <div class="span2">
+       <!--spacer!-->
+      </div>
+  
+  </div> <!--row-fluid-->
+  
+  
+  <div class="bottomImages">
+      
+      {% for photo in photos %}
+   
+       <img src="{{ photo }}" />
+     
+      {% endfor %}
+      
+  </div> <!--bottomImages-->
