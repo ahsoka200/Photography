@@ -16,11 +16,16 @@
   
   
   <div class="bottomImages">
+     <div class="wrapper">
       
-      {% for photo in photos %}
-   
-       <img src="{{ photo }}" />
+        {% for photo in photos %}
      
-      {% endfor %}
+          <img src="{{ photo }}" />
+       
+        {% endfor %}
+
+      </div>
       
   </div> <!--bottomImages-->
+
+  <script src="{{ url_for('static', filename='image-replacement.js') }}"></script>

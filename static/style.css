@@ -23,7 +23,7 @@ ul.navbar{
 }
 
 a:hover {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .mainimage {
@@ -37,12 +37,46 @@ a:hover {
 }
 
 .bottomImages {
-  height: 155px;
-  width: 1000px;
-  overflow-x: scroll;
-  overflow-y: hidden;
+  height: 122px;
+  
+  
+  overflow-x:scroll;
 }
 
 .bottomImages img{
   height: 122px;
+    float:left;
+
 }
+
+.about-text {
+  padding-top: 35px;
+}
+
+.wrapper {
+  width: 1800px;
+    overflow: hidden;
+}
+
+.home-image {
+  width: 2000px;
+}
+
+.photo-categories {
+  
+  height: 200px;
+}
+
+
+.bwWrapper {
+    position:relative;
+}
+
+
+
+
+
+
+
+
+
