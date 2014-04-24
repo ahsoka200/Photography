@@ -22,7 +22,11 @@ ul.navbar{
   padding-top: 27px;
 }
 
-a:hover {
+ul.navbar a:hover {
+  text-decoration: none;
+}
+
+.span2 a:hover {
   text-decoration: none;
 }
 
@@ -38,15 +42,12 @@ a:hover {
 
 .bottomImages {
   height: 122px;
-  
-  
   overflow-x:scroll;
 }
 
 .bottomImages img{
   height: 122px;
     float:left;
-
 }
 
 .about-text {
@@ -55,6 +56,7 @@ a:hover {
 
 .wrapper {
   width: 1800px;
+  height: 100px;
     overflow: hidden;
 }
 
@@ -72,11 +74,34 @@ a:hover {
     position:relative;
 }
 
+.bottomImagesText {
+  padding-top: 20px;
+}
 
+.bottomImages .wrapper img {
+  padding-left: 10px;
+}
 
+.photoCategoryLabel {
+  position: relative;
+  top: -235px;
+  color: white;
+  font-family: Andale Mono; 
+  font-size: 20px;
+}
 
+.photoCategoryFilter {
+  background-color: black;
+  position: relative;
+  height: 200px;
+  top: -200px;
+  opacity: .6;
+  display: none;
+}
 
-
+.photoCategoryFilter:hover {
+  display: block;
+}
 
 
 
