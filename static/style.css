@@ -117,6 +117,13 @@ ul.navbar a:hover {
    border: 3px solid red;
 }
 
+.actionphoto{
+
+  background-image:url("/static/images/Photos/action.jpg");
+  background-repeat:no-repeat;
+
+}
+
 
 
 
