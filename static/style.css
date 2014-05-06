@@ -1,3 +1,11 @@
+body.body {
+background-color: #E3E3E3; 
+}
+
+.headerdiv {
+  background-color: white;
+}
+
 .header {
   background-color: white;
   height: 75px;
@@ -41,6 +49,7 @@ ul.navbar a:hover {
 
 .mainimage {
  height: 500px;
+ border: 5px solid white;
 }
 
 .about-text {
@@ -52,6 +61,7 @@ ul.navbar a:hover {
 .bottomImages {
   height: 130px;
   overflow-x:scroll;
+  padding-bottom: 30px;
 }
 
 .bottomImages img{
@@ -97,6 +107,11 @@ ul.navbar a:hover {
   color: white;
   font-family: Andale Mono; 
   font-size: 20px;
+ 
+}
+
+a.bwWrapper:hover {
+   text-decoration: none;
 }
 
 .photoCategoryFilter {
@@ -121,7 +136,10 @@ div.categories .span3 {
     padding: 0 15px;
 }
 
-
+.top-padding {
+  padding-top: 25px;
+  border-top: 1px solid gray;
+}
 
 
 
