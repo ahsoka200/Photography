@@ -8,7 +8,10 @@ app = Flask(__name__)
 app.debug = True
 
 #app.config.from_object('config')
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
+if 'DATABASE_URL' in os.environ:
+	app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
+else:
+	app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://hjjfqpndngobor:NvFLJbOkjm3tIIjC_lR1ovcRPd@ec2-54-225-101-119.compute-1.amazonaws.com:5432/d8foksvgpa5qav'
 db = SQLAlchemy(app)
 from model import *
 
