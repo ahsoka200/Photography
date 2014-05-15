@@ -1,9 +1,29 @@
+
 import os
 from flask import Flask
 from flask import render_template
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.debug = True
+
+#app.config.from_object('config')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
+db = SQLAlchemy(app)
+from model import *
+
+
+
+
+@app.route('/all_users')
+def double_hello():
+    users = User.query.all()
+
+    output = ""
+    for user in users:
+        output += "<p>"+str(user.id) +" "+ user.username + " " + user.message + "</p>"
+    return "this is what was found: " + output
+
 
 @app.route('/')
 def home():
