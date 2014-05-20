@@ -28,6 +28,19 @@ def double_hello():
     return "this is what was found: " + output
 
 
+
+@app.route('/all_photos')
+def show_all_photos():
+    photoinfos = PhotoInfo.query.all()
+
+    output = ""
+    for photo in photoinfos:
+        output += "<p>"+str(photo.id) +" "+ photo.title + " " + photo.place + " " + photo.year + " " + photo.path + " " + photo.category + "</p>"
+    return "this is what was found: " + output
+
+
+
+
 @app.route('/')
 def home():
     return page(render_template('home.html'))

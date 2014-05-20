@@ -18,11 +18,13 @@ class PhotoInfo(db.Model):
     title = db.Column(db.String)
     place = db.Column(db.String)
     year = db.Column(db.String)
-    path= db.Column(db.String)
+    path = db.Column(db.String)
+    category = db.Column(db.String)
 
-    def __init__(self, title, place, year, path):
+    def __init__(self, title, place, year, path, category):
         self.title = title
         self.place = place
         self.year = year
         self.path = path
+        self.category = category
 
