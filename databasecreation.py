@@ -1,4 +1,4 @@
-dfrom hello import db
+from hello import db
 from flask_sqlalchemy import SQLAlchemy
 from model import *
 
