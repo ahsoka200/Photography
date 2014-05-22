@@ -28,3 +28,15 @@ class PhotoInfo(db.Model):
         self.path = path
         self.category = category
 
+
+    def serialize(self):
+        print "HELLOHELLOHELLO"
+        return{
+            'id':self.id,
+            'title':self.title,
+            'place':self.place,
+            'year':self.year,
+            'path':"../static/images/Photos/"+self.path,
+            'category':self.category
+        }
+

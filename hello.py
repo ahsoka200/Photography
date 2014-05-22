@@ -3,6 +3,8 @@ import os
 from flask import Flask
 from flask import render_template
 from flask_sqlalchemy import SQLAlchemy
+from flask import jsonify
+import json
 
 app = Flask(__name__)
 app.debug = True
@@ -31,7 +33,7 @@ def double_hello():
 
 @app.route('/all_photos')
 def show_all_photos():
-    photoinfos = PhotoInfo.query.all()
+    photoinfos = PhotoInfo.query.filter(PhotoInfo.category=='action')
 
     output = ""
     for photo in photoinfos:
@@ -56,13 +58,17 @@ def photos():
 @app.route('/photos/<category>')
 def photo_category(category):
 
-	photoList = []
-	for root, dirs, files in os.walk("./static/images/Photos/"+ category):
-		for file in files:
-			if file.endswith(".jpg") or file.endswith (".JPG"):
-				 photoList.append(os.path.join(root[1:], file))
+	photoList = PhotoInfo.query.filter(PhotoInfo.category == category)
+	#for root, dirs, files in os.walk("./static/images/Photos/"+ category):
+	#	for file in files:
+	#		if file.endswith(".jpg") or file.endswith (".JPG"):
+	#			 photoList.append(os.path.join(root[1:], file))
 
-	return page(render_template('photos.html', photos = photoList))
+	photosJSON = []
+	for p in photoList:
+		photosJSON.append(p.serialize())
+
+	return page(render_template('photos.html', photos = photoList, photosJSON = photosJSON))
 
 
 @app.route('/videos')

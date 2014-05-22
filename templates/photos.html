@@ -5,15 +5,15 @@
       </div>
 
       <div class="span8 text-center">
-       <img class="mainimage" src=" {{ photos[0] }} " />
+       <img class="mainimage" src="../static/images/Photos/{{ photos[0].path }}" />
       </div>
 
       <div class="span2">
         <div class="info text-center">  
          
-          <h2 class="fadeText">wave one</h2>
-         <p class="infoP fadeText">Lake Tahoe, CA</p>
-         <p class="infoP fadeText">May 2014</p>
+          <h2 class="fadeText" id="title">{{photos[0].title}}</h2>
+         <p class="infoP fadeText" id="place">{{photos[0].place}}</p>
+         <p class="infoP fadeText" id="year">{{photos[0].year}}</p>
          <img class="rightarrow" src="/static/images/rightarrow.png">
           <img class="leftarrow" src="/static/images/leftarrow.png">
 
@@ -30,13 +30,20 @@
       
         {% for photo in photos %}
      
-          <img src="{{ photo }}" />
+          <img src="../static/images/Photos/{{ photo.path }}"/>
        
         {% endfor %}
 
       </div>
       
-  </div> <!--bottomImages-->
+  </div> 
+
+  <!--bottomImages-->
+ <script>
+        var all_photos = {{ photosJSON|tojson }};
+        var photo1Title = all_photos[1].category;
+  </script>
+ 
 
   <script src="{{ url_for('static', filename='image-replacement.js') }}"></script>
    <script src="{{ url_for('static', filename='info-box.js') }}"></script>
