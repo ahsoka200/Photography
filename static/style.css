@@ -149,7 +149,8 @@ div.categories .span3 {
   float: right;
   padding-left: 5px;
   padding-right: 5px;
-
+  min-width: 200px;
+  min-height: 220px;
 }
 
 .infoP {
