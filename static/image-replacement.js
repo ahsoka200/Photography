@@ -6,8 +6,9 @@ var mainimage = $("img.mainimage");
 bottomImages.first().addClass('border');
 
 bottomImages.on( "click", function( event ) {
-   mainimage.attr('src', $(this).attr('src'));
-   var picInfo = getimageinfo($(this).attr('src'));
+	var bigimage = $(this).attr('src').replace("zzz", "");
+   mainimage.attr('src', bigimage);
+   var picInfo = getimageinfo(bigimage);
    
    bottomImages.removeClass('border');
    $(this).addClass('border');
