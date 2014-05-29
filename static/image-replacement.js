@@ -42,7 +42,7 @@ function updatebox(info){
 }
 
 
-$(document).ready(function() {
+$(window).load(function() {
    alert('Page fully loaded.');
   });
 
