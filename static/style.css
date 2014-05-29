@@ -1,3 +1,4 @@
+
 body.body {
 background-color: #E3E3E3; 
 }
@@ -162,11 +163,23 @@ div.categories .span3 {
   display: none;
 }
 
+.mainimagediv {
+  min-width: 760px;
+}
 
 
+.imagecategory {
+  min-width: 250px;
+}
 
-
-
+.copyright {
+  font-size: 12px;
+  color: #808080;
+  font-family: Andale Mono;
+  padding-left: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
 
 
 
