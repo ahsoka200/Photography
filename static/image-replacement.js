@@ -43,9 +43,16 @@ function updatebox(info){
 
 
 $(window).load(function() {
-   alert('Page fully loaded.');
-  });
 
+   for (var i = 1; i < all_photos.length; i++) {
+
+	   	var currentimage = new Image();
+	   	currentimage.src = all_photos[i].path
+	   	
+	   
+    }
+
+  });
 
 
 
