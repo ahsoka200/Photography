@@ -25,9 +25,7 @@ function getimageinfo(path){
 	    if(path == all_photos[i].path){
 	    	return all_photos[i];
 	    }
-
 	}
-
 }
 
 function updatebox(info){
@@ -40,7 +38,19 @@ function updatebox(info){
 	imagetitle.text(info.title);
 	imageplace.text(info.place);
 	imageyear.text(info.year);
-
-
  
 }
+
+
+$(document).ready(function() {
+   alert('Page fully loaded.');
+  });
+
+
+
+
+
+
+
+
+
