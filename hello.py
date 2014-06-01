@@ -6,6 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask import jsonify
 import json
 
+
 app = Flask(__name__)
 app.debug = True
 
