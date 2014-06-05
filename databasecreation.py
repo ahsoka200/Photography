@@ -53,8 +53,8 @@ image9= PhotoInfo('Up', 'Los Altos', '2013', 'IMG_9599.jpg', 'lifestyle')
 db.session.add(image9)
 db.session.commit()
 
-imageTEST= PhotoInfo('TEST', 'Hawaii Oahu', '2014', 'Max on the beach 2.jpg', 'lifestyle')
-db.session.add(imageTEST)
+image= PhotoInfo('Sunrise', 'Oahu', '2014', 'Max on the beach 2.jpg', 'lifestyle')
+db.session.add(image)
 db.session.commit()
 
 
