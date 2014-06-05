@@ -1,4 +1,8 @@
 
+html, body {
+    height: 100%;
+}
+
 body.body {
 background-color: #E3E3E3; 
 }
@@ -181,8 +185,16 @@ div.categories .span3 {
   padding-bottom: 5px;
 }
 
+.pagewrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -30px; /* the bottom margin is the negative value of the footer's height */
+}
 
-
+.footer, .push {
+  height: 30px; /* .push must be the same height as .footer */
+}
 
 
 
