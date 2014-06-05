@@ -54,7 +54,7 @@ db.session.add(image9)
 db.session.commit()
 
 imageTEST= PhotoInfo('TEST', 'Hawaii Oahu', '2014', 'Max on the beach 2.jpg', 'lifestyle')
-db.session.add(image9)
+db.session.add(imageTEST)
 db.session.commit()
 
 
