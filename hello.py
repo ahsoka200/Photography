@@ -21,25 +21,25 @@ from model import *
 
 
 
-@app.route('/all_users')
-def double_hello():
-    users = User.query.all()
+# @app.route('/all_users')
+# def double_hello():
+#     users = User.query.all()
 
-    output = ""
-    for user in users:
-        output += "<p>"+str(user.id) +" "+ user.username + " " + user.message + "</p>"
-    return "this is what was found: " + output
+#     output = ""
+#     for user in users:
+#         output += "<p>"+str(user.id) +" "+ user.username + " " + user.message + "</p>"
+#     return "this is what was found: " + output
 
 
 
-@app.route('/all_photos')
-def show_all_photos():
-    photoinfos = PhotoInfo.query.filter(PhotoInfo.category=='action')
+# @app.route('/all_photos')
+# def show_all_photos():
+#     photoinfos = PhotoInfo.query.filter(PhotoInfo.category=='action')
 
-    output = ""
-    for photo in photoinfos:
-        output += "<p>"+str(photo.id) +" "+ photo.title + " " + photo.place + " " + photo.year + " " + photo.path + " " + photo.category + "</p>"
-    return "this is what was found: " + output
+#     output = ""
+#     for photo in photoinfos:
+#         output += "<p>"+str(photo.id) +" "+ photo.title + " " + photo.place + " " + photo.year + " " + photo.path + " " + photo.category + "</p>"
+#     return "this is what was found: " + output
 
 
 
