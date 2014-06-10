@@ -66,16 +66,6 @@ image10= PhotoInfo('Surf', 'Oahu', '2014', 'G0020768.JPG', 'sports')
 db.session.add(image10)
 db.session.commit()
 
-
-
-
-
-
-
-
-
-
-
-
+#computer adds
 
 

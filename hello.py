@@ -5,6 +5,7 @@ from flask import render_template
 from flask_sqlalchemy import SQLAlchemy
 from flask import jsonify
 import json
+from flask import request
 
 
 app = Flask(__name__)
@@ -32,14 +33,14 @@ from model import *
 
 
 
-# @app.route('/all_photos')
-# def show_all_photos():
-#     photoinfos = PhotoInfo.query.filter(PhotoInfo.category=='action')
+@app.route('/all_photos')
+def show_all_photos():
+    photoinfos = PhotoInfo.query.filter(PhotoInfo.category=='action')
 
-#     output = ""
-#     for photo in photoinfos:
-#         output += "<p>"+str(photo.id) +" "+ photo.title + " " + photo.place + " " + photo.year + " " + photo.path + " " + photo.category + "</p>"
-#     return "this is what was found: " + output
+    output = ""
+    for photo in photoinfos:
+        output += "<p>"+str(photo.id) +" "+ photo.title + " " + photo.place + " " + photo.year + " " + photo.path + " " + photo.category + "</p>"
+    return "this is what was found: " + output
 
 
 
@@ -87,3 +88,37 @@ def about():
 @app.route('/store')
 def store():
 	return page(render_template('coming-soon.html'))
+
+@app.route('/newphoto')
+def newPhoto():
+	return page(render_template('new-photo.html'))
+
+@app.route('/uploadphoto', methods=['GET',  'POST'])
+def uploadPhoto():
+	if request.method == 'POST':
+		title = request.form['title']
+		place = request.form['place']
+		year = request.form['year']
+		category = request.form['category']
+		f = request.files['photoFile']
+
+		#add to database
+		image = PhotoInfo(title, place, year, f.filename, category)
+		db.session.add(image)
+		db.session.commit()
+
+		#add to databasecreation.py
+		with open("databasecreation.py", "a") as pythonfile:
+			pythonfile.write("image = PhotoInfo('"+title+"', '"+place+"', '"+year+"', '"+f.filename+"', '"+category+"')\n")
+			pythonfile.write("db.session.add(image)\n")
+			pythonfile.write("db.session.commit()\n\n")
+
+		return page(render_template('uploadphoto.html', category = category))
+
+
+
+
+
+
+
+

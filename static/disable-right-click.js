@@ -29,5 +29,5 @@ else if (document.all&&!document.getElementById){
 document.onmousedown=clickIE4;
 }
 
-document.oncontextmenu=new Function("alert(message);return false")
+document.oncontextmenu=new Function("return false")
  
