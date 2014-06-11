@@ -1,6 +1,7 @@
 
 html, body {
     height: 100%;
+
 }
 
 body.body {
@@ -195,6 +196,22 @@ div.categories .span3 {
 .footer, .push {
   height: 30px; /* .push must be the same height as .footer */
 }
+
+.chosefile {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.newphotoimput {
+  padding-left: 20px;
+}
+
+.submitb{
+  display: block;
+  margin-top: 20px;
+}
+
+
 
 
 

@@ -29,5 +29,9 @@ else if (document.all&&!document.getElementById){
 document.onmousedown=clickIE4;
 }
 
-document.oncontextmenu=new Function("return false")
+document.oncontextmenu=new Function("return false");
+
+$("img").mousedown(function(){
+    return false;
+});
  
