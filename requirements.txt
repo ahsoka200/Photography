@@ -1,8 +1,10 @@
+--allow-external PIL
+--allow-unverified PIL
 Flask==0.10.1
 Flask-SQLAlchemy==1.0
 Jinja2==2.7.2
 MarkupSafe==0.19
-PIL==1.1.7
+http://effbot.org/media/downloads/Imaging-1.1.7.tag.gz
 SQLAlchemy==0.9.4
 Werkzeug==0.9.4
 gunicorn==18.0
