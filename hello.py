@@ -1,4 +1,3 @@
-
 import os
 from flask import Flask
 from flask import render_template
@@ -6,6 +5,9 @@ from flask_sqlalchemy import SQLAlchemy
 from flask import jsonify
 import json
 from flask import request
+import PIL
+from PIL import Image
+
 
 
 app = Flask(__name__)
@@ -113,7 +115,21 @@ def uploadPhoto():
 			pythonfile.write("db.session.add(image)\n")
 			pythonfile.write("db.session.commit()\n\n")
 
-		return page(render_template('uploadphoto.html', category = category))
+
+		#saves the photo in the corect spot.
+		#img = Image.open(StringIO(f))
+		f.save('/Users/Chris/code/Photography/static/images/Photos/' + f.filename)
+		img = Image.open('/Users/Chris/code/Photography/static/images/Photos/' + f.filename)
+		width,height = img.size
+		imgbig = img.resize((width*1000/height, 1000), Image.ANTIALIAS)
+		imgbig.save('/Users/Chris/code/Photography/static/images/Photos/' + f.filename)
+
+		imgzzz = img.resize((width*244/height, 244), Image.ANTIALIAS)
+		imgzzz.save('/Users/Chris/code/Photography/static/images/Photos/zzz' + f.filename)
+
+
+
+		return page(render_template('uploadphoto.html'))
 
 
 
