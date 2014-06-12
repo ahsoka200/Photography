@@ -69,7 +69,5 @@ db.session.commit()
 #computer adds
 
 
-image = PhotoInfo('test', 'here', '2014', 'IMG_0799.jpg', 'action')
-db.session.add(image)
-db.session.commit()
+
 
