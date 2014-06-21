@@ -211,6 +211,14 @@ div.categories .span3 {
   margin-top: 20px;
 }
 
+.logoonabout {
+  border: 5px solid white;
+}
+
+.homeimage {
+  border-top: 1px solid #919191;
+  border-bottom: 2px solid #919191;
+}
 
 
 
